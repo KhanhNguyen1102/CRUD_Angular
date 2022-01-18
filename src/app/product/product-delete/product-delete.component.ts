@@ -20,10 +20,15 @@ export class ProductDeleteComponent implements OnInit {
       // @ts-ignore
       this.id = +paramMap.get('id');
       const product = this.getProduct(this.id);
+
       this.productForm = new FormGroup({
+        // @ts-ignore
         id: new FormControl(product.id),
+        // @ts-ignore
         name: new FormControl(product.name),
+        // @ts-ignore
         price: new FormControl(product.price),
+        // @ts-ignore
         description: new FormControl(product.description),
       });
     });
